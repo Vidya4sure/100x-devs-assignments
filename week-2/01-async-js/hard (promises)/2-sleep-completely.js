@@ -5,6 +5,20 @@
  */
 
 function sleep(milliseconds) {
+    return new Promise(resolve=> {
+        setTimeout(function(){
+            resolve()
+        } , milliseconds)
+    })
 }
+
+function highWork (){
+    let num = 0
+    for (let index = 0; index < Date.now; index++) {
+        num = num + index
+    }
+}
+
+highWork()
 
 module.exports = sleep;
